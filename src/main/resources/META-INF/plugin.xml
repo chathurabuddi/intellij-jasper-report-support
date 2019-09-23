@@ -1,32 +1,32 @@
 <idea-plugin>
-    <id>lk.chathurabuddi.jasper-report-support</id>
+    <id>lk.chathurabuddi.jasper-report-supportn</id>
     <name>Jasper Report Support</name>
-    <version>1.0.0</version>
-    <vendor email="support@chathurabuddi.lk" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
+    <vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
 
     <description><![CDATA[
-    This plugin will enable Jasper Report Compile and Preview support within Intellij Idea.<br>
+    This plugin will enable Jasper Report support within Intellij Idea.<br>
     ]]></description>
 
     <change-notes><![CDATA[
       Release 1.0.0: Initial release.<br>
+      - Enable syntax highliting and code suggestion for jrxml files
     ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lk.chathurabuddi.lang</depends>
+    <depends>com.intellij.modules.lang</depends>
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileTypeFactory implementation="lk.chathurabuddi.file.JasperReportFileTypeFactory"/>
+        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType" fieldName="INSTANCE"
+                  language="Jrxml" extensions="jrxml"/>
+        <lang.parserDefinition language="Jrxml" implementationClass="lk.chathurabuddi.lang.jrxml.JrxmlParserDefinition"/>
+        <xml.schemaProvider implementation="lk.chathurabuddi.lang.jrxml.autocomplete.JrxmlSchemaProvider"/>
     </extensions>
 
+
     <actions>
-        <group id="JasperSupport.SampleMenu" text="Greeting" description="Greeting menu">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="JasperSupport.TextBoxes" class="lk.chathurabuddi.action.HelloAction" text="Hello" description="Says hello"/>
-        </group>
     </actions>
 </idea-plugin>
