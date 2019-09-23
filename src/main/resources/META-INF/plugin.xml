@@ -22,9 +22,10 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 -->
-<idea-plugin>
+<idea-plugin url="https://github.com/chathurabuddi/intellij-jasper-report-support">
     <id>lk.chathurabuddi.jasper-report-supportn</id>
     <name>Jasper Report Support</name>
+    <version>1.0.0</version>
     <vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
 
     <description><![CDATA[
@@ -37,11 +38,7 @@
     ]]>
     </change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
     <depends>com.intellij.modules.lang</depends>
-    -->
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType" fieldName="INSTANCE"
