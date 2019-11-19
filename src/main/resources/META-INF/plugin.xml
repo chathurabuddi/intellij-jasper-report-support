@@ -37,7 +37,7 @@
       - Enable syntax highliting and code suggestion for jrxml files
     ]]>
     </change-notes>
-
+    <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
