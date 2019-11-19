@@ -1,23 +1,18 @@
-### Introduction
-**Intellij Jasper Report Support** plugin enable jasper reports viewing and compiling support for Intellij Idea IDE. 
+## Intellij Jasper Report Support plugin
+This plugin enable jasper reports viewing and compiling support for Intellij Idea IDE.    
 
 ### Installation & Usage 
 
-#### 1. Install from Marketplace
-
+1. **Install from Marketplace**    
 Open `Settings > Plugins > Marketplace` in your Intellij Idea IDE, search for Jasper Report Support and install the plugin.
 
-#### 2. Build from source
-
-Clone the repository and run `buildPlugin` gradle task in project root. 
-
-```
-git clone https://github.com/chathurabuddi/intellij-jasper-report-support.git
-cd intellij-jasper-report-support
-gradle buildPlugin
-```
-
-plugin jar file will be available at `<PROJECT_ROOT>/build/libs` directory
+1. **Build from source**    
+Clone the repository and run `buildPlugin` gradle task in project root. After that plugin jar file will be generated at `<PROJECT_ROOT>/build/libs` directory
+    ```
+    git clone https://github.com/chathurabuddi/intellij-jasper-report-support.git
+    cd intellij-jasper-report-support
+    gradle buildPlugin
+    ```
 
 ### Issues
 Please make sure to read the 
