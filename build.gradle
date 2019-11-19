@@ -4,9 +4,10 @@ plugins {
 }
 
 group 'lk.chathurabuddi'
-version '1.0'
+version version
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
@@ -18,7 +19,15 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.2.2'
+    plugins 'java'
+    version ideaVersion
+    pluginName 'Jasper Report Support'
+    sameSinceUntilBuild false
+    patchPluginXml {
+        sinceBuild customSinceBuild
+        untilBuild customUntilBuild
+    }
 }
+
 patchPluginXml {
 }
