@@ -23,11 +23,12 @@
  */
 package lk.chathurabuddi.lang.jrxml;
 
+import com.intellij.lang.Language;
 import com.intellij.lang.xml.XMLLanguage;
 
 public class JrxmlLanguage extends XMLLanguage {
 
     private JrxmlLanguage() {
-        super("Jrxml", "application/xml", "text/xml");
+        super((Language) null, "Jrxml", "application/xml", "text/xml");
     }
 }
