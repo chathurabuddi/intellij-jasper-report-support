@@ -41,8 +41,8 @@
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType" fieldName="INSTANCE"
-                  language="Jrxml" extensions="jrxml"/>
+        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType"
+              fieldName="INSTANCE" language="XML" extensions="jrxml"/>
         <lang.parserDefinition language="Jrxml" implementationClass="lk.chathurabuddi.lang.jrxml.JrxmlParserDefinition"/>
         <xml.schemaProvider implementation="lk.chathurabuddi.lang.jrxml.autocomplete.JrxmlSchemaProvider"/>
     </extensions>
