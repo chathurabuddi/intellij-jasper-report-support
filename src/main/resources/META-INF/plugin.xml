@@ -33,8 +33,12 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      Release 1.0.1: v1.0.1
+      - Added support for Intellij 2019.3
+      - Minor issues fixed
+
       Release 1.0.0: Initial release.<br>
-      - Enable syntax highliting and code suggestion for jrxml files
+      - Enable syntax highlighting and code suggestion for jrxml files
     ]]>
     </change-notes>
     <depends>com.intellij.modules.platform</depends>
