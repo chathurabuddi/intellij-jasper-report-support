@@ -25,7 +25,7 @@
 <idea-plugin url="https://github.com/chathurabuddi/intellij-jasper-report-support">
     <id>lk.chathurabuddi.jasper-report-supportn</id>
     <name>Jasper Report Support</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
 
     <description><![CDATA[
@@ -33,16 +33,20 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      Release 1.0.1: v1.0.1
+      - Added support for Intellij 2019.3
+      - Minor issues fixed
+
       Release 1.0.0: Initial release.<br>
-      - Enable syntax highliting and code suggestion for jrxml files
+      - Enable syntax highlighting and code suggestion for jrxml files
     ]]>
     </change-notes>
-
+    <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType" fieldName="INSTANCE"
-                  language="Jrxml" extensions="jrxml"/>
+        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType"
+              fieldName="INSTANCE" language="XML" extensions="jrxml"/>
         <lang.parserDefinition language="Jrxml" implementationClass="lk.chathurabuddi.lang.jrxml.JrxmlParserDefinition"/>
         <xml.schemaProvider implementation="lk.chathurabuddi.lang.jrxml.autocomplete.JrxmlSchemaProvider"/>
     </extensions>
