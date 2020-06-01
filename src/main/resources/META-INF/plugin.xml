@@ -35,6 +35,7 @@
     <change-notes><![CDATA[
       Release 1.0.2: v1.0.2<br>
       - Added support for Intellij 2020.1<br>
+      <br>
       Release 1.0.1: v1.0.1<br>
       - Added support for Intellij 2019.3<br>
       - Minor issues fixed<br>
