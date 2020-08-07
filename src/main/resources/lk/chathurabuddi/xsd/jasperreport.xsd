@@ -3564,7 +3564,7 @@
                     </restriction>
                 </simpleType>
             </attribute>
-            <attribute name="textAdjust" type="string" use="optional">
+            <attribute name="textAdjust" use="optional">
                 <annotation>
                     <documentation>
 			    Instructs the report engine to allow the text field to stretch downwards in order to display all its text when it doesn't fit in the defined text field height.
