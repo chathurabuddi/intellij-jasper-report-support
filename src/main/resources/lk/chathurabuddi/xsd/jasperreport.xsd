@@ -3543,7 +3543,11 @@
             </sequence>
             <attribute name="isStretchWithOverflow" use="optional" default="false">
                 <annotation>
-                    <documentation>Instructs the report engine to allow the text field to stretch downwards in order to display all its text when it doesn't fit in the defined text field height.</documentation>
+                    <documentation>
+			    <i>Deprecated</i>. Replaced by attribute <a href="#textField_textAdjust">textAdjust</a>.
+			    <p/>
+			    Instructs the report engine to allow the text field to stretch downwards in order to display all its text when it doesn't fit in the defined text field height.
+		    </documentation>
                 </annotation>
                 <simpleType>
                     <restriction base="string">
@@ -3555,6 +3559,43 @@
                         <enumeration value="false">
                             <annotation>
                                 <documentation></documentation>
+                            </annotation>
+                        </enumeration>
+                    </restriction>
+                </simpleType>
+            </attribute>
+            <attribute name="textAdjust" type="string" use="optional">
+                <annotation>
+                    <documentation>
+			    Instructs the report engine to allow the text field to stretch downwards in order to display all its text when it doesn't fit in the defined text field height.
+			    Also can scale down the font size in order for the text content to fit the design size of the text field element
+                    </documentation>
+                </annotation>
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="CutText">
+                            <annotation>
+                                <documentation>
+                                    The text is cut, if it does not fit the text field element size.
+                                </documentation>
+                            </annotation>
+                        </enumeration>
+                        <enumeration value="StretchHeight">
+                            <annotation>
+                                <documentation>
+                                    The text field element is stretched in height to accommodate the entire content.
+                                </documentation>
+                            </annotation>
+                        </enumeration>
+                        <enumeration value="ScaleFont">
+                            <annotation>
+                                <documentation>
+                                    The font size of the text is scaled down so that the entire content fits the text field element size.
+                                    <p/>
+                                    Font size is scaled down using decreasing font size increments/decrements, until the best fit is found. The minimum font size increment/decrement amount is configured using the
+                                    <a href="http://jasperreports.sourceforge.net/api/net/sf/jasperreports/engine/fill/JRFillTextElement.html#PROPERTY_SCALE_FONT_STEP_LIMIT">net.sf.jasperreports.scale.font.step.limit</a>
+                                    property, which also serves as minimum acceptable font size.
+                                </documentation>
                             </annotation>
                         </enumeration>
                     </restriction>
