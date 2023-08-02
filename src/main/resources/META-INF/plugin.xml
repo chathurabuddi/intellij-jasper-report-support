@@ -25,7 +25,7 @@
 <idea-plugin url="https://github.com/chathurabuddi/intellij-jasper-report-support">
     <id>lk.chathurabuddi.jasper-report-supportn</id>
     <name>Jasper Report Support</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
 
     <description><![CDATA[
