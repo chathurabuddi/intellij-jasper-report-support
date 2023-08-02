@@ -1,5 +1,7 @@
 ## Intellij Jasper Report Support plugin
+<!-- Plugin description -->
 This plugin enable jasper reports viewing and compiling support for Intellij Idea IDE.    
+<!-- Plugin description end -->
 
 ### Installation & Usage 
 

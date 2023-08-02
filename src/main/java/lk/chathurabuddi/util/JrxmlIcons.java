@@ -28,5 +28,9 @@ import com.intellij.openapi.util.IconLoader;
 import javax.swing.*;
 
 public class JrxmlIcons {
-    public static final Icon FILE = IconLoader.getIcon("/lk/chathurabuddi/icons/jrxml.png");
+	public static final Icon FILE = IconLoader.getIcon("/lk/chathurabuddi/icons/jrxml.png", ClassLoader.getSystemClassLoader());
+
+	private JrxmlIcons() {
+		throw new IllegalStateException("Cannot initialize JrxmlIcons");
+	}
 }
