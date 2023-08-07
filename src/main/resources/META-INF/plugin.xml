@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
  The MIT License (MIT)
 
  Copyright (c) 2017-2019 Chathura Buddhika
@@ -23,16 +22,14 @@
  SOFTWARE.
 -->
 <idea-plugin url="https://github.com/chathurabuddi/intellij-jasper-report-support">
-    <id>lk.chathurabuddi.jasper-report-supportn</id>
-    <name>Jasper Report Support</name>
-    <version>1.0.3</version>
-    <vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
-
-    <description><![CDATA[
+	<id>lk.chathurabuddi.jasper-report-support</id>
+	<name>Jasper Report Support</name>
+	<version>1.0.3</version>
+	<vendor email="chathu.buddi@gmail.com" url="http://www.chathurabuddi.lk">chathurabuddi</vendor>
+	<description><![CDATA[
     This plugin will enable Jasper Report support within Intellij Idea.<br>
     ]]></description>
-
-    <change-notes><![CDATA[
+	<change-notes><![CDATA[
       Release 1.0.2: v1.0.2<br>
       - Added support for Intellij 2020.1<br>
       <br>
@@ -43,17 +40,21 @@
       Release 1.0.0: Initial release.<br>
       - Enable syntax highlighting and code suggestion for jrxml files
     ]]>
-    </change-notes>
-    <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.lang</depends>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType"
-              fieldName="INSTANCE" language="XML" extensions="jrxml"/>
-        <lang.parserDefinition language="Jrxml" implementationClass="lk.chathurabuddi.lang.jrxml.JrxmlParserDefinition"/>
-        <xml.schemaProvider implementation="lk.chathurabuddi.lang.jrxml.autocomplete.JrxmlSchemaProvider"/>
-    </extensions>
-
-    <actions>
-    </actions>
+	</change-notes>
+	<depends>com.intellij.modules.platform</depends>
+	<depends>com.intellij.modules.lang</depends>
+	<extensions defaultExtensionNs="com.intellij">
+		<fileType name="Jasper source file" implementationClass="lk.chathurabuddi.file.type.jrxml.JrxmlFileType" fieldName="INSTANCE" language="XML" extensions="jrxml" />
+		<lang.parserDefinition language="Jrxml" implementationClass="lk.chathurabuddi.lang.jrxml.JrxmlParserDefinition" />
+		<xml.schemaProvider implementation="lk.chathurabuddi.lang.jrxml.autocomplete.JrxmlSchemaProvider" />
+		<notificationGroup id="Jasper Report Support Notification Group" displayType="BALLOON" />
+	</extensions>
+	<actions>
+		<action id="lk.chathurabuddi.actions.CompileJrxmlAction"
+		        class="lk.chathurabuddi.actions.CompileJrxmlAction"
+		        text="Compile JR XML File"
+		        description="This action compiles the selected .jrxml file into a .jasper binary file, in the same folder of the source file">
+			<add-to-group group-id="BuildMenu" anchor="last" />
+		</action>
+	</actions>
 </idea-plugin>
